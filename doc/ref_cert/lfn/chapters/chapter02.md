@@ -485,21 +485,17 @@ For additional insight, or deeper understanding and reading of IOPS, refer to th
 
 **Objectives**
 
-The NFVI performance measurements aim at assessing the performance of a given NFVI implementation on the execution plane (i.e., excluding VIM) by providing it with a set of significant metrics to be measured.
+The NFVI performance measurements aim at assessing the performance of a given NFVI implementation with known configurations and providing a set of relevant metrics to be measured with specified methods and open-source tools. Methods and tools should allow validating the performance of any NFVI implementation adhereing to the Reference Model and Reference Architecture.
 
-They should allow validating the performance of any software and/or hardware NFVI implementation as described in Reference Model.
-
-Of course, they can also be used for other purposes, such as:
+These performance metrics, methods and tools may also be used for other purposes, such as:
 - fine tuning of software and/or hardware NFVI configuration (e.g., the number of cores dedicated to the DPDK vSwitch)
 - comparing the performances of different software or hardware technologies (e.g., DPDK vSwitch vs hardware-offloaded vSwitch)
 - assessing the performance impact of specific features (e.g., with or without encapsulation)
 
 
-**Metrics Baseline**
+**Measurement Baselines**
 
-For the purpose of validation, a baseline of the performance metrics is required for comparison with the results of their measurements on the NFVI implementation to be validated.
-
-That baseline is a set of threshold values which could be determined by **measuring the performance metrics on Reference Implementations**.
+A baseline of performance measurements is required for comparison with commerical NFVI implementations. The baseline is a range of threshold values determined by **measuring performance on Reference Implementations**.
 
 The validation can then be based on simple pass/fail test results or on a grade (e.g., "class" A, B or C) provided by the combination of pass/fail results for 2 different threshold values of some (or all) metrics.
 
@@ -509,6 +505,7 @@ The validation can then be based on simple pass/fail test results or on a grade 
 Two categories of metrics are considered depending on whether they are related to either the VNF domain or the NFVI domain itself:
 
 - Metrics related to the VNF domain are defined from VNF perspective (i.e., per VNFC, per vNIC, per vCPU...) and should concern VNF as well as NFVI actors. 
+
 - Metrics related to the NFVI domain are defined per NFVI node ; their measurement is based on virtual workloads (i.e., VM or container) in order to reflect the performance of a NFVI node with a given profile ; they should only concern NFVI actors. 
 
 The following table contains the list of performance metrics related to the VNF domain.
